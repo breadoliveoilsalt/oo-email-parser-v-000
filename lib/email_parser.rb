@@ -13,7 +13,8 @@ class EmailParser
 
   def parse
     arr = raw_emails.split(/\s|,/)
-    arr.delete("").uniq
+    arr.delete("")
+    arr.uniq
     # use .uniq
   end
 
