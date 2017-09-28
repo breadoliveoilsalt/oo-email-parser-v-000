@@ -12,7 +12,9 @@ class EmailParser
   end
 
   def parse
-    @raw_emails.split("," && " ")
+    arr = raw_emails.split(/\s|,/)
+    arr.delete("").uniq
+    # use .uniq
   end
 
 end
